@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5003b67480e04cf78fca8daa28e2b227" Name="Diagram1">
+        <EntityTypeShape EntityType="HotelModel.AdditionalServices" Width="1.5" PointX="5.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.Cleaners" Width="1.5" PointX="8.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.CleanSchedule" Width="1.5" PointX="11" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.Clients" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.ClientsInHotel" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.ClientsServices" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.ReportOfRoomsStatus" Width="1.5" PointX="8.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.Roles" Width="1.5" PointX="8.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.RoomCategories" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.RoomFond" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.RoomPrices" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.RoomStatus" Width="1.5" PointX="6" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.Users" Width="1.5" PointX="11" PointY="7.75" IsExpanded="true" />
+        <AssociationConnector Association="HotelModel.FK__ClientsSe__Servi__1332DBDC" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__CleanSche__Clean__7F2BE32F" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__ClientsIn__Clien__6D0D32F4" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__ClientsIn__Numbe__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__ClientsSe__Clien__123EB7A3" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__ReportOfR__Numbe__06CD04F7" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__ReportOfR__Statu__07C12930" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__Users__Role__17F790F9" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__RoomFond__Catego__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__RoomPrice__Categ__5EBF139D" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

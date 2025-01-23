@@ -1,0 +1,17 @@
+﻿<Window x:Class="Hotel_UP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hotel_UP"
+        mc:Ignorable="d"
+        Title="Гостиница &quot;УЮТ&quot;" Height="550" Width="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="497*"/>
+        </Grid.RowDefinitions>
+        <Frame Name="MainFrame" Content="Frame" Source="Pages/ReservationPage.xaml" NavigationUIVisibility="Hidden" Grid.Row="1" Navigated="Frame_Navigated"/>
+        <Button Name="btnBack" Grid.Row="0" Content="Назад" HorizontalAlignment="Left" Width="114" Visibility="Hidden" Click="btnBack_Click"/>
+    </Grid>
+</Window>
