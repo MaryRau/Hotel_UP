@@ -28,33 +28,16 @@ namespace Hotel_UP.Pages
 
         private void btnFilter_Click(object sender, RoutedEventArgs e)
         {
-            if (dateStart.SelectedDate == null && dateEnd.SelectedDate == null)
+            if (dateStart.SelectedDate == null || dateEnd.SelectedDate == null)
             {
                 MessageBox.Show("Выберите дату для фильтрации!");
                 return;
             }
 
-            DateTime end;
-            DateTime start;
+            DateTime end = dateEnd.SelectedDate.Value;
+            DateTime start = dateStart.SelectedDate.Value;
 
-            if (dateStart.SelectedDate == null && dateEnd.SelectedDate != null)
-            {
-                end = (DateTime)dateEnd.SelectedDate;
-                DataGridReservations.ItemsSource = Entities.GetContext().ClientsInHotel.ToList().Where(x => x.DepartureDate == end);
-            }
-
-            else if (dateStart.SelectedDate != null && dateEnd.SelectedDate == null)
-            {
-                start = (DateTime)dateStart.SelectedDate;
-                DataGridReservations.ItemsSource = Entities.GetContext().ClientsInHotel.ToList().Where(x => x.EntryDate == start);
-            }
-
-            else
-            {
-                end = (DateTime)dateEnd.SelectedDate;
-                start = (DateTime)dateStart.SelectedDate;
-                DataGridReservations.ItemsSource = Entities.GetContext().ClientsInHotel.ToList().Where(x => x.EntryDate == start && x.DepartureDate == end);
-            }
+            DataGridReservations.ItemsSource = Entities.GetContext().ClientsInHotel.ToList().Where(x => x.EntryDate >= start && x.EntryDate <= end).ToList();
         }
 
         private void btnShowAll_Click(object sender, RoutedEventArgs e)
@@ -89,15 +72,6 @@ namespace Hotel_UP.Pages
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new AddReservationPage());
-        }
-
-        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
-        {
-            if (Visibility == Visibility.Visible)
-            {
-                Entities.GetContext().ChangeTracker.Entries().ToList().ForEach(x => x.Reload());
-                DataGridReservations.ItemsSource = Entities.GetContext().ClientsInHotel.ToList();
-            }
         }
     }
 }
