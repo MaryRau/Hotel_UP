@@ -82,7 +82,8 @@
     <Compile Include="ClientsServices.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Methods.cs" />
+    <Compile Include="MethodARM.cs" />
+    <Compile Include="MethodRate.cs" />
     <Compile Include="Model.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
